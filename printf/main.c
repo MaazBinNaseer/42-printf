@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 17:54:03 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/08/12 15:00:30 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/12 15:12:17 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@
 
 int main(void)
 {
+    //Printing the char 
+    char c = 'x';
+    printf(RED "Original Printf: %c\n", c);
+    ft_printf(YELLOW "My print: %c\n",c);
+    
     //Printing the string
     char str[] = "We are printing the string"; 
     printf(PURPLE "--------------------------------\n");
