@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 18:18:57 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/08/12 14:43:16 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/13 15:47:43 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ int ft_coversion(va_list args, const char convert)
         count = ft_printnum(va_arg(args, int));
     else if (convert == '%')
         count = ft_printper();
+    else if(convert == 'p')
+        count = ft_printptr(va_arg(args, unsigned long long));
+    else if (convert == 'x' || convert == 'X')
+        count = ft_printhex(va_arg(args, unsigned int), convert);
     
     return (count);
 }
