@@ -6,12 +6,12 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 15:22:45 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/08/13 15:54:31 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/18 15:43:40 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "printf.h"
+#include "ft_printf.h"
 
 int ft_readptrlen(uintptr_t num)
 {
@@ -36,9 +36,9 @@ void ft_putptr(uintptr_t num)
     else
     {
         if(num <= 9)
-            ft_putchar_fd((num + '0'), 0);
+            ft_putchar((num + '0'));
         else
-            ft_putchar_fd((num - 10 + 'a'), 0);
+            ft_putchar((num - 10 + 'a'));
     }
 }
 

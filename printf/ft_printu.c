@@ -1,46 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printstr.c                                      :+:      :+:    :+:   */
+/*   ft_printu.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/11 12:17:39 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/08/18 15:59:04 by mbin-nas         ###   ########.fr       */
+/*   Created: 2022/08/15 13:07:17 by mbin-nas          #+#    #+#             */
+/*   Updated: 2022/08/18 12:30:27 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "ft_printf.h"
-
-// Reading the string 
-void ft_str(char *str)
+int ft_readu_len(unsigned int num)
 {
-    size_t  i;
-
-    i   = 0;
-    while(str[i] != '\0')
+    int len; 
+    
+    len = 0;
+    if(num != 0)
     {
-        write(1, &str[i], 1);
-        i++;
-    }    
+        len++;
+        num = num /10;
+    }
+    return (len);
 }
 
-//Printing the string 
-int ft_printstr(char *str)
+int ft_print_u(unsigned int nb)
 {
-    size_t  i;
+    char value; 
     
-    i   = 0;
-    if(str == NULL)
-    {
-        ft_str("(null)");
-        return(6);
-    }
-    while(str[i])
-    {
-        write(1, &str[i], 1);
-        i++;
-    }
-    return(i);
+    if(nb == 0)
+        return (write(1, "0", 1));
+    else if(nb >= 10)
+         ft_print_u(nb/10);
+    nb = nb % 10; 
+    value = (nb + '0');
+    write(1, &value, 1);
+    
+    return(ft_readu_len(nb));     
 }

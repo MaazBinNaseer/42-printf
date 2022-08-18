@@ -6,12 +6,12 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 12:33:53 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/08/13 15:29:07 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/18 15:43:01 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "printf.h"
+#include "ft_printf.h"
 
 //Need to read the characters in the hex
 int ft_readhexlen(unsigned int n)
@@ -40,13 +40,13 @@ void ft_puthex(unsigned int num, const char convert)
     else 
     {
         if(num <= 9)
-            ft_putchar_fd((num + '0'), 0);
+            ft_putchar((num + '0'));
         else
         {
             if(convert == 'x')
-                ft_putchar_fd((num - 10 + 'a'), 0);
+                ft_putchar((num - 10 + 'a'));
             if(convert == 'X')
-                ft_putchar_fd((num - 10 + 'A'), 0);
+                ft_putchar((num - 10 + 'A'));
         }       
     }   
 }
