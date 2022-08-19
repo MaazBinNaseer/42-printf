@@ -6,14 +6,14 @@
 #    By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/10 16:30:33 by mbin-nas          #+#    #+#              #
-#    Updated: 2022/08/18 15:42:05 by mbin-nas         ###   ########.fr        #
+#    Updated: 2022/08/19 15:04:30 by mbin-nas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # -.- Makefile -.-
 
 NAME =	libftprintf.a
-CFILES = ft_printstr.c ft_printnbr.c ft_printf.c ft_printptr.c  ft_putchar.c\
+CFILES = ft_printstr.c ft_printnbr.c ft_printf.c  ft_putchar.c\
 		 ft_printu.c   ft_printhex.c ft_itoa.c \
 		 
 OBJECTS=	$(CFILES:.c=.o)

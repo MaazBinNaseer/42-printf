@@ -10,37 +10,37 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "ft_printf.h"
+#include "libft.h"
 
-// Reading the string 
-void ft_str(char *str)
+// Reading the string
+void	ft_str(char *str)
 {
-    size_t  i;
+	size_t	i;
 
-    i   = 0;
-    while(str[i] != '\0')
-    {
-        write(1, &str[i], 1);
-        i++;
-    }    
+	i = 0;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
 }
 
-//Printing the string 
-int ft_printstr(char *str)
+//Printing the string
+int	ft_printstr(char *str)
 {
-    size_t  i;
-    
-    i   = 0;
-    if(str == NULL)
-    {
-        ft_str("(null)");
-        return(6);
-    }
-    while(str[i])
-    {
-        write(1, &str[i], 1);
-        i++;
-    }
-    return(i);
+	size_t	i;
+
+	i = 0;
+	if (str == NULL)
+	{
+		ft_str("(null)");
+		return (6);
+	}
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
 }
