@@ -1,4 +1,6 @@
 # 42-printf
+![image](https://user-images.githubusercontent.com/88405217/192702376-67c4da4e-5d3e-4408-a4bd-61fe4c2ff611.png) ![image](https://user-images.githubusercontent.com/88405217/192702335-0e535ac0-984d-4b7b-969e-19d200f6a5a5.png)
+
 We are replicating the behavior of the printf function in c language 
 --------------------------------------------------------------------
 Important Functions to look into: 
